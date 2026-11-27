@@ -1,7 +1,7 @@
 """A general, config-driven process-bigraph wrapper over the PHREEQC engine."""
 from __future__ import annotations
 
-from viva_engine_core import EngineProcess
+from engine_core import EngineProcess
 
 from .engine import PhreeqcEngine, speciate
 
@@ -11,7 +11,7 @@ class PhreeqcProcess(EngineProcess):
 
     ``config['recipe']`` is the speciation (data: solution / reactants / equalize /
     extract — see :func:`viva_phreeqc.engine.speciate`); ``config['inputs']`` and
-    ``config['outputs']`` (from :class:`~viva_engine_core.EngineProcess`) declare the
+    ``config['outputs']`` (from :class:`~engine_core.EngineProcess`) declare the
     ports. Input ports fill the recipe's ``"$name"`` placeholders; the extracted values
     are emitted on the output ports. A domain model that needs pre/post logic should
     instead reuse :func:`speciate` + :class:`PhreeqcEngine` directly.

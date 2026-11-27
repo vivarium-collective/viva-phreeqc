@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "The genuine USGS PHREEQC (IPhreeqc) engine as a reusable, config-driven process-bigraph bridge."
 requires-python = ">=3.12"
 dependencies = [
-    "viva-engine-core>=0.1.0",
+    "engine-core>=0.1.0",
     "process-bigraph",
     "bigraph-schema",
     "phreeqpython>=1.6",
@@ -24,5 +24,5 @@ allow-direct-references = true
 packages = ["viva_phreeqc"]
 
 [tool.uv.sources]
-viva-engine-core = { git = "https://github.com/vivarium-collective/viva-engine-core.git", tag = "0.1.0" }
+engine-core = { git = "https://github.com/vivarium-collective/engine-core.git", tag = "0.1.0" }
 process-bigraph = { git = "https://github.com/vivarium-collective/process-bigraph.git", branch = "main" }
