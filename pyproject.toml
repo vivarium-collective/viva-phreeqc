@@ -1,0 +1,26 @@
+[project]
+name = "viva-phreeqc"
+version = "0.1.0"
+description = "The genuine USGS PHREEQC (IPhreeqc) engine as a reusable, config-driven process-bigraph bridge."
+requires-python = ">=3.12"
+dependencies = [
+    "process-bigraph",
+    "bigraph-schema",
+    "phreeqpython>=1.6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["viva_phreeqc"]
+
+[tool.uv.sources]
+process-bigraph = { git = "https://github.com/vivarium-collective/process-bigraph.git", branch = "main" }
